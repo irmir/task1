@@ -97,17 +97,17 @@ console.log(getArrayOfPositives([-1, 2, -5, -4, 0]));
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
 function distinct(arr) {
-    let newArr = [];
+    let arrDistinct = [];
 
     arr.forEach(function (item) {
-        if (newArr.length === 0) {
-            newArr.push(item);
+        if (arrDistinct.length === 0) {
+            arrDistinct.push(item);
         };
-        if (!newArr.includes(item)) {
-            newArr.push(item);
+        if (!arrDistinct.includes(item)) {
+            arrDistinct.push(item);
         };
     });
-    return newArr;
+    return arrDistinct;
 }
 
 console.log(distinct(['a', 'a', 'a', 'a']));
