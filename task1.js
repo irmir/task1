@@ -12,21 +12,15 @@
  *    console.log(r.getArea());   // => 200
  */
 function Rectangle(width, height) {
-    try {
-        this.width = width;
-        this.height = height;
+    this.width = width;
+    this.height = height;
 
-        Rectangle.prototype.getArea = function () {
-            return this.width * this.height;
-        };
-    }
-    catch (e) {
-
-        throw new Error('Not implemented');
-    }
+    Rectangle.prototype.getArea = function () {
+        return this.width * this.height;
+    };
 }
 
-let rect1 = new Rectangle(5,10);
+let rect1 = new Rectangle(5, 10);
 console.log(rect1.getArea());
 console.log(rect1.width);
 console.log(rect1.height);
@@ -43,7 +37,6 @@ console.log(rect1.height);
  */
 function getTail(arr, n) {
     return arr.slice(-n);
-    // throw new Error('Not implemented');
 }
 
 console.log(getTail([1, 2, 3, 4, 5, 6, 8, 9], 3));
@@ -63,7 +56,6 @@ console.log(getTail([1, 3, 4, 5], 2));
 function insertItem(arr, item, index) {
     arr.splice(index, 0, item);
     return arr;
-    // throw new Error('Not implemented');
 }
 
 console.log(insertItem([1, 3, 4, 5], 2, 1));
@@ -88,7 +80,6 @@ function getArrayOfPositives(arr) {
         }
     });
     return arrPositeve;
-    // throw new Error('Not implemented');
 }
 
 console.log(getArrayOfPositives([0, 1, 2, -3, 4, 5]));
@@ -117,7 +108,6 @@ function distinct(arr) {
         };
     });
     return newArr;
-    // throw new Error('Not implemented');
 }
 
 console.log(distinct(['a', 'a', 'a', 'a']));
