@@ -20,7 +20,7 @@ function Rectangle(width, height) {
     };
 }
 
-let rect1 = new Rectangle(5, 10);
+const rect1 = new Rectangle(5, 10);
 console.log(rect1.getArea());
 console.log(rect1.width);
 console.log(rect1.height);
@@ -73,17 +73,14 @@ console.log(insertItem([1, 'b', 'c'], 'x', 0));
  *    [] => []
  */
 function getArrayOfPositives(arr) {
-    let arrPositeve = [];
-    arr.forEach(function (item) {
-        if (item > 0) {
-            arrPositeve.push(item);
-        }
+    let arrPositive = arr.filter(function(item){
+        return item > 0;
     });
-    return arrPositeve;
+    console.log(arrPositive);
 }
 
-console.log(getArrayOfPositives([0, 1, 2, -3, 4, 5]));
-console.log(getArrayOfPositives([-1, 2, -5, -4, 0]));
+getArrayOfPositives([0, 1, 2, -3, 4, 5]);
+getArrayOfPositives([-1, 2, -5, -4, 0]);
 
 /**
  * Returns array containing only unique values from the specified array.
@@ -97,6 +94,13 @@ console.log(getArrayOfPositives([-1, 2, -5, -4, 0]));
  *   [ 1, 1, 2, 2, 3, 3, 4, 4] => [ 1, 2, 3, 4]
  */
 function distinct(arr) {
+    // let arrDistinct = arr.filter(item => !arrDistinct.includes(item));
+
+    // let arrDistinct = arr.filter(function(item){
+    //     return !arrDistinct.includes(item);
+    // });
+    // console.log(arrDistinct);
+
     let arrDistinct = [];
 
     arr.forEach(function (item) {
@@ -110,6 +114,6 @@ function distinct(arr) {
     return arrDistinct;
 }
 
-console.log(distinct(['a', 'a', 'a', 'a']));
-console.log(distinct([1, 1, 2, 2, 3, 3, 4, 4]));
+distinct(['a', 'a', 'a', 'a']);
+distinct([1, 1, 2, 2, 3, 3, 4, 4]);
 
