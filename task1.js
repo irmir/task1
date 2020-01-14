@@ -111,9 +111,37 @@ function distinct(arr) {
             arrDistinct.push(item);
         };
     });
-    return arrDistinct;
+    return arrDistinct; 
 }
 
 distinct(['a', 'a', 'a', 'a']);
 distinct([1, 1, 2, 2, 3, 3, 4, 4]);
+
+const div = document.body.appendChild(document.createElement('div'));
+const but1 = div.appendChild(document.createElement('button'));
+but1.innerText = "+";
+const div2 = div.appendChild(document.createElement('div'));
+div2.innerText = 0;
+const but2 = div.appendChild(document.createElement('button'));
+but2.innerText = "-";
+
+but1.addEventListener('click', plus);
+but2.addEventListener('click', minus);
+
+function plus() {
+    div2.innerText = +div2.innerText + 1;
+}
+
+function minus() {
+    div2.innerText = +div2.innerText - 1;
+}
+
+
+
+
+
+
+
+
+
 
